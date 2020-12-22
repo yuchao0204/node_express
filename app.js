@@ -9,6 +9,7 @@ var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
 var registRouter = require('./routes/regist');
 var uploadFile = require('./routes/upload');
+var search = require('./routes/search');
 var app = express();
 
 // view engine setup
@@ -37,6 +38,8 @@ app.use('/login', loginRouter);
 app.use('/regist', registRouter);
 
 app.use('/zhutu', uploadFile);
+
+app.use('/search', search);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
